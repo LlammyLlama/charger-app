@@ -1,13 +1,13 @@
-print "creating charge_sessions..."
+puts "creating charge_sessions..."
 
 ChargeSession.create("user": "Gordon Cote")
 ChargeSession.create("user": "Lorna Phillips")
 ChargeSession.create("user": "Lorna Phillips")
 ChargeSession.create("user": "Esmai Merritt")
 
-print "charge_sessions created"
+puts "charge_sessions created"
 
-print "creating meter_values..."
+puts "creating meter_values..."
 MeterValue.create( "charge_session_id": "1", "amount_of_charge": "130", "rate_of_charge": "1300" )
 MeterValue.create( "charge_session_id": "1", "amount_of_charge": "903", "rate_of_charge": "2600" )
 MeterValue.create( "charge_session_id": "1", "amount_of_charge": "2195", "rate_of_charge": "3600")
@@ -25,4 +25,4 @@ MeterValue.create( "charge_session_id": "4", "amount_of_charge": "1258", "rate_o
 MeterValue.create( "charge_session_id": "4", "amount_of_charge": "2554", "rate_of_charge": "4300")
 MeterValue.create( "charge_session_id": "4", "amount_of_charge": "2988", "rate_of_charge": "3300")
 
-print "meter_values created"
+puts "meter_values created"
