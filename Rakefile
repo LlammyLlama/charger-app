@@ -1,12 +1,12 @@
 require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new(:spec)
 
-require_relative "config/charger_app"
+require_relative "config/application"
 
 task 'run' do
-  $LOAD_PATH.unshift(File.dirname(__FILE__), 'lib')
-  require 'charger_app'
-  ChargerApp.call
+  $LOAD_PATH.unshift(File.dirname(__FILE__), 'config')
+  require "application"
+  Application.call
 end
 
 

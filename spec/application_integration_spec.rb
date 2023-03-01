@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'charger_app'
+require_relative '../app/controllers/charge_sessions_controller'
 
 RSpec.describe 'integration' do
   let(:meter_values) do
@@ -46,9 +46,9 @@ RSpec.describe 'integration' do
     JSON
   end
 
-  describe ChargerApp do
+  describe ChargeSessionsController do
     subject(:result) do
-      json_result = ChargerApp.call(meter_values, charge_sessions)
+      json_result = ChargeSessionsController.call(meter_values, charge_sessions)
 
       JSON.parse(json_result)
     end
