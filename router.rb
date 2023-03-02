@@ -20,8 +20,8 @@ class Router
     puts "What would you like to see?"
     puts "1. Total Charge Amount for Each Session"
     puts "2. See the Average Rate of charge for Each Session"
-    puts "3. Result of All of the Charge Sessions for Each User"
-    puts "4. Exit the program"
+    # puts "3. Result of All of the Charge Sessions for Each User"
+    puts "3. Exit the program"
     puts "-------------------------------"
   end
 
@@ -29,8 +29,8 @@ class Router
     case choice
     when 1 then @charge_sessions_controller.total_charge_for_each_session
     when 2 then @charge_sessions_controller.avg_rate_total_for_each_session
-    when 3 then @charge_sessions_controller.list
-    when 4 then stop
+    # when 3 then @charge_sessions_controller.list
+    when 3 then stop
     else
       puts "please select from the numbers 1, 2, 3 or 4"
     end
